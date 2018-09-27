@@ -37,10 +37,26 @@ public class Introduction : MonoBehaviour
     public int minDamage;
     public int maxDamage;
     public int antalDemoner;
-    
+    public bool Checked;
+    public int MyIntValue = 10;
+    public float UserValue = 1;
+    public int Dice = 10;
+
     // Use this for initialization
     void Start()
     {
+
+        if (Checked == true)
+        {
+            Debug.Log("True");
+        }
+        else
+        {
+            Debug.Log("False");
+        }
+
+        
+
         //print(testint * testint);
         //print(testString);
         //print(11f / 2);
@@ -54,7 +70,7 @@ public class Introduction : MonoBehaviour
         //Triangel();
         //Uppgift6();
         //Uppgift7();
-        Uppgift8();
+        //Uppgift8();
     }
     //void Uppgift1()
     //{
@@ -97,16 +113,74 @@ public class Introduction : MonoBehaviour
     //        "Volymen på ett klot räknas ut genom 4 * π * radie^3 / 3 så om radien är {0} så blir volymen {1}", 
     //        radius, 4 * 3.14f * (radius * radius * radius) / 3 * 2978));
     //}
-    void Uppgift8()
-    { 
-        Debug.Log(string.Format(
-            "Det finns {3} demoner, Demonerna har {2} HP var med en skada på {0} till {1} så kommer det ta i snitt {4}, denna gången tog det {2} slag att döda dem", 
-            minDamage, maxDamage, (demon * antalDemoner) / Random.Range(minDamage, maxDamage), antalDemoner, (minDamage * maxDamage) / 2));
-     }
-    
+    //void Uppgift8()
+    //{
+    //    Debug.Log(string.Format(
+    //        "Det finns {3} demoner, Demonerna har {2} HP var med en skada på {0} till {1} så kommer det ta i snitt {4}, denna gången tog det {2} slag att döda dem",
+    //        minDamage, maxDamage, (demon * antalDemoner) / Random.Range(minDamage, maxDamage), antalDemoner, (minDamage * maxDamage) / 2));
+    //}
+
     // Update is called once per frame
     void Update()
     {
+
+        //if(Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    UserValue += 2;
+        //}
+
+        //if(Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    UserValue /= 2;
+        //}
+        
+        //if (Input.GetKeyDown(KeyCode.UpArrow))
+        //{
+        //    print(UserValue);
+        //}
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            Dice -= Random.Range(1, 7);
+            Dice += Random.Range(1, 7);
+        }
+           
+
+        // == lika med
+        // != inte lika med 
+        // <= mindre eller lika med
+        // >= större eller lika med
+        // < mindre än
+        // > större än
+        // && och (and)
+        // || eller
+
+        //if (MyIntValue == 10 || Checked == true)
+        //{
+            
+        //    print("Måndag");
+        //}
+        //else if (MyIntValue == 9)
+        //{
+        //    print("Tisdag");
+        //}
+        //else
+        //{
+        //    print("Okänd dag");
+        //}
+
+        //if(Input.GetKeyDown(KeyCode.R))
+        //{
+        //    print("reload");
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    print(Random.Range(0, 10));
+        //    print("Lean Left");
+        //}
+
+        //Random.Range(0, 10);
 
     }
 }
